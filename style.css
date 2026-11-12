@@ -1,0 +1,475 @@
+/* =================================
+   MANJUNATHA TOWING SERVICES
+   MAIN STYLESHEET
+================================= */
+
+:root {
+  --yellow: #ffc400;
+  --black: #101010;
+  --dark: #191919;
+  --white: #ffffff;
+  --grey: #bdbdbd;
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER */
+
+.header {
+  min-height: 75px;
+  padding: 15px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #080808;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #292929;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--yellow);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 620px;
+  padding: 110px 8%;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("images/towing-truck.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.eyebrow {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.08;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--yellow);
+}
+
+.hero-text {
+  color: #dddddd;
+  max-width: 550px;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border: 2px solid var(--yellow);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: #111111;
+}
+
+.btn-yellow:hover {
+  background: transparent;
+  color: var(--yellow);
+}
+
+.btn-outline {
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--yellow);
+  color: #111111;
+}
+
+.tagline {
+  color: var(--grey);
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 90px 8%;
+}
+
+.section h2 {
+  font-size: clamp(30px, 5vw, 45px);
+  margin-bottom: 15px;
+}
+
+.section-intro {
+  color: var(--grey);
+  margin-bottom: 40px;
+}
+
+/* SERVICES SECTION */
+
+.services {
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.service-card {
+  background: var(--dark);
+  padding: 35px 25px;
+  border-bottom: 3px solid var(--yellow);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background: #222222;
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  color: var(--yellow);
+}
+
+.service-card p {
+  color: var(--grey);
+  font-size: 14px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+  background: #181818;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border: 2px solid #333333;
+}
+
+.about-content h3 {
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.about-content p:not(.eyebrow) {
+  color: var(--grey);
+  margin-bottom: 18px;
+}
+
+.about-content .btn {
+  margin-top: 10px;
+}
+
+/* TRUCK SECTION */
+
+.truck-section {
+  text-align: center;
+}
+
+.truck-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  margin-top: 25px;
+  border: 2px solid #333333;
+}
+
+/* SERVICE AREAS SECTION */
+
+.areas {
+  text-align: center;
+  background: #101010;
+}
+
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.area-list span {
+  padding: 13px 22px;
+  background: #191919;
+  border: 1px solid var(--yellow);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.area-list span:hover {
+  background: var(--yellow);
+  color: #111111;
+  transform: translateY(-4px);
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  background: #181818;
+  text-align: center;
+}
+
+.contact > p:not(.eyebrow) {
+  color: var(--grey);
+  margin: 15px 0;
+}
+
+.phone-number {
+  display: block;
+  font-size: clamp(30px, 6vw, 48px);
+  color: var(--yellow);
+  font-weight: bold;
+  margin: 20px 0 30px;
+}
+
+.contact .hero-buttons {
+  justify-content: center;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 40px 8%;
+  text-align: center;
+  background: #080808;
+  color: var(--grey);
+  border-top: 1px solid #292929;
+}
+
+.footer p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* FLOATING CALL BUTTON */
+
+.floating-call {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  background: var(--yellow);
+  color: #111111;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  z-index: 99;
+  box-shadow: 0 5px 20px #0008;
+  transition: transform 0.3s;
+}
+
+.floating-call:hover {
+  transform: scale(1.1);
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding: 15px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #080808;
+    padding: 25px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 550px;
+    padding: 90px 6%;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 450px) {
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .area-list {
+    flex-direction: column;
+  }
+
+  .area-list span {
+    width: 100%;
+  }
+
+  .floating-call {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
